@@ -13,7 +13,8 @@ body{
 }
 
 .tm-sidebar{
-    background-color: #000;
+    background: rgb(10,131,182);
+    background: linear-gradient(90deg, rgba(10,131,182,1) 0%, rgba(2,0,36,1) 25%, rgba(24,24,85,1) 88%, rgba(0,212,255,1) 100%);
 }
 
 .oque{
