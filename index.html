@@ -56,7 +56,7 @@ https://templatemo.com/tm-536-dream-pulse
                 </li>
                 <li class="nav-item">
                   <a href="#arr" class="nav-link">
-                    <span class="d-inline-block mr-3">Array 50</span>
+                    <span class="d-inline-block mr-3">Exemplo</span>
                     <span class="d-inline-block tm-white-rect"></span>
                   </a>
                 </li>
@@ -129,8 +129,8 @@ https://templatemo.com/tm-536-dream-pulse
           <div class="tm-section-wrap bg-white">
             <section id="fun" class="row tm-section">
                   <div class="container">
-
-                   <h1> malloc</h1>
+                    <h1>ALOCAR MEMÓRIA</h1>
+                   <h2> malloc</h2>
                     <p>A função malloc atribui um bloco de memória em bytes e retorna um ponteiro do tipo void para o início do espaço de memória alocado. O usuário deve fornecer explicitamente o tamanho do bloco, requer para o uso.</p>
                     <p style="font-family:'consolas'">Sintaxe : malloc(number of elements * size of each element);</p>
                     <pre>
@@ -138,7 +138,7 @@ float *v; //definindo o ponteiro v
 v = (float *) malloc(num_componentes * sizeof(float));
                     </pre>
 
-                    <h1>calloc</h1> 
+                    <h2>calloc</h2> 
                     <p>A função calloc opera exatamente da mesma forma que a função malloc excluindo o fato de que requer dois argumentos, como no caso de malloc (), apenas um argumento é necessário.</p> 
                     <p style="font-family:'consolas'">Sintaxe : calloc(size_t nitems, size_t size);</p>
                     <pre>
@@ -146,7 +146,7 @@ v = (float *) malloc(num_componentes * sizeof(float));
  ptr = (int*)calloc(10, 2);
                     </pre>
 
-                    <h1>realloc</h1> 
+                    <h2>realloc</h2> 
                     <p>A função modifica o tamanho da memória previamente alocada apontada por *ptr para aquele especificado por num.O valor de num pode ser maior ou menor que o original. Um ponteiro para o bloco é devolvido porque realloc() pode precisar mover o bloco para aumentarseu tamanho. Se isso ocorrer, o conteúdo do bloco antigo é copiado no novo bloco, e nenhuma informação éperdida. Se ptr for nulo, aloca size bytes e devolve um ponteiro; se size é zero, a memória apontada por ptr é liberada. Se não houver memória suficiente para a alocação, um ponteiro nulo é devolvido e o bloco original é deixado inalterado</p> 
                     <p style="font-family:'consolas'">Sintaxe : realloc (void *ptr, unsigned int num);</p>
                     <pre>
@@ -154,7 +154,8 @@ v = (float *) malloc(num_componentes * sizeof(float));
  ptr = (int*)calloc(10, 2);
                     </pre>
 
-                   <h1>free</h1> 
+                    <h1>DESALOCAR MEMÓRIA</h1>
+                   <h2>free</h2> 
                    <p>A função free libera o espaço de memória alocado.</p> 
                    <p style="font-family:'consolas'">Sintaxe : free(void *ptr);</p>
                    <pre>
@@ -170,7 +171,28 @@ free(v); //liberando o espaço de memória alocado
             
           <div class="tm-section-wrap bg-white">
             <section id="arr" class="row tm-section">
-              
+              <pre>
+int main()								
+{
+  int n;
+  printf ("Tamanho do array->");
+  scanf("%d",&n);
+
+  int *ptArr = (int*)malloc(n*sizeof(int));//array alocado dinamicamente
+  //preencher o array com valores a começar no 1
+  for (int i=0; i < n; i++){
+      ptArr[i] = i+1;   
+  }
+  //imprimir o array
+  for (int i=0; i < n; i++){
+      printf("%d - ",ptArr[i]);
+  }
+
+  cout << endl;
+  system("pause");				
+  return 0;	
+}
+              </pre>
             </section>
           </div>
             
