@@ -22,6 +22,10 @@ int main()
         printf("%d - ",ptArr[i]);
     }
 
+    free(ptArr);
+
+    cout << *ptArr << endl;
+
     cout << endl;
     system("pause");				
 	return 0;	
