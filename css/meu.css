@@ -5,6 +5,7 @@
 
 body{
     font-family: 'Ubuntu', sans-serif;
+    color: rgb(59, 59, 207);
 }
 
 
@@ -13,13 +14,19 @@ body{
 }
 
 .tm-sidebar{
-    background: rgb(10,131,182);
-    background: linear-gradient(90deg, rgba(10,131,182,1) 0%, rgba(2,0,36,1) 25%, rgba(24,24,85,1) 88%, rgba(0,212,255,1) 100%);
+    background: rgb(9,82,112);
+    background: linear-gradient(90deg, rgba(9,82,112,1) 0%, rgba(2,0,36,1) 19%, rgba(2,0,36,1) 81%, rgba(9,82,112,1) 100%);
 }
 
 .oque{
     padding: 50px;
-    background-color: #fff;
+    color: #fff;
+    background: rgb(9,82,112);
+    background: linear-gradient(90deg, rgba(9,82,112,1) 0%, rgba(2,0,36,1) 0%, rgba(2,0,36,1) 100%, rgba(9,82,112,1) 100%);
+    border-radius: 10px;
+  
+    padding: 20px;
+   
 }
 
 .biblio li{
