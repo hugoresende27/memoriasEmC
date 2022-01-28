@@ -9,6 +9,10 @@ body{
     font-weight: 900;
 }
 
+p{
+    text-align: justify;
+}
+
 
 .tm-brand{
    font-size: 34px;
