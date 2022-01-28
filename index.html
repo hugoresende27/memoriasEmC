@@ -131,7 +131,7 @@ https://templatemo.com/tm-536-dream-pulse
                   <div class="container">
                     <h1>ALOCAR MEMÓRIA</h1>
                    <h2> malloc</h2>
-                    <p>A função malloc atribui um bloco de memória em bytes e retorna um ponteiro do tipo void para o início do espaço de memória alocado. O usuário deve fornecer explicitamente o tamanho do bloco, requer para o uso.</p>
+                    <p>A função malloc atribui um bloco de memória em bytes e retorna um ponteiro do tipo void para o início do espaço de memória alocado. O user deve fornecer explicitamente o tamanho do bloco, requer para o uso.</p>
                     <p style="font-family:'consolas'">Sintaxe : malloc(number of elements * size of each element);</p>
                     <pre>
 float *v; //definindo o ponteiro v
@@ -147,7 +147,7 @@ v = (float *) malloc(num_componentes * sizeof(float));
                     </pre>
 
                     <h2>realloc</h2> 
-                    <p>A função modifica o tamanho da memória previamente alocada apontada por *ptr para aquele especificado por num.O valor de num pode ser maior ou menor que o original. Um ponteiro para o bloco é devolvido porque realloc() pode precisar mover o bloco para aumentarseu tamanho. Se isso ocorrer, o conteúdo do bloco antigo é copiado no novo bloco, e nenhuma informação éperdida. Se ptr for nulo, aloca size bytes e devolve um ponteiro; se size é zero, a memória apontada por ptr é liberada. Se não houver memória suficiente para a alocação, um ponteiro nulo é devolvido e o bloco original é deixado inalterado</p> 
+                    <p>A função modifica o tamanho da memória previamente alocada apontada por *ptr para aquele especificado por num.O valor de num pode ser maior ou menor que o original. Um ponteiro para o bloco é devolvido porque realloc() pode precisar mover o bloco para aumentar o seu tamanho. Se isso ocorrer, o conteúdo do bloco antigo é copiado no novo bloco, e nenhuma informação é perdida. Se ptr for nulo, aloca size bytes e devolve um ponteiro; se size é zero, a memória apontada por ptr é liberada. Se não houver memória suficiente para a alocação, um ponteiro nulo é devolvido e o bloco original é deixado inalterado</p> 
                     <p style="font-family:'consolas'">Sintaxe : realloc (void *ptr, unsigned int num);</p>
                     <pre>
  int*ptr;
@@ -187,8 +187,8 @@ int main()
   for (int i=0; i < n; i++){
       printf("%d - ",ptArr[i]);
   }
+  free(ptArr);
 
-  cout << endl;
   system("pause");				
   return 0;	
 }
