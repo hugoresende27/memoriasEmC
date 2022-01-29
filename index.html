@@ -120,8 +120,8 @@ https://templatemo.com/tm-536-dream-pulse
               <div class="container oque">
                 <h1>Existem 3 tipos de alocação de memória </h1>
                 <p>Alocação estática significa que a memória para suas variáveis ​​é alocada quando o programa é iniciado. O tamanho é fixo quando o programa é criado. Ele se aplica a variáveis ​​globais, variáveis ​​de ambito de arquivo e variáveis ​​qualificadas com static funções internas definidas.</p>
-                <p>A alocação automática de memória ocorre para variáveis ​​(não estáticas) definidas dentro de funções e geralmente são armazenadas na pilha (embora o padrão C não exija que uma pilha seja usada). Você não precisa reservar memória extra para usá-los, mas, por outro lado, também tem controle limitado sobre a vida útil dessa memória. Ex: variáveis ​​automáticas em uma função só estão lá até que a função termine.</p>
-                <p>A alocação de memória dinâmica é um pouco diferente. Agora você controla o tamanho exato e o tempo de vida desses locais de memória. Se você não o liberar, ocorrerá vazamentos de memória, o que pode causar o travamento do seu aplicativo, já que em algum momento o sistema não pode alocar mais memória.</p>
+                <p>A alocação automática de memória ocorre para variáveis ​​(não estáticas) definidas dentro de funções e geralmente são armazenadas na pilha (embora o padrão C não exija que uma pilha seja usada). Não precisamos reservar memória extra para usá-los, mas, por outro lado, também temos controle limitado sobre a vida útil dessa memória. Ex: variáveis ​​automáticas em uma função só estão lá até que a função termine.</p>
+                <p>A alocação de memória dinâmica é um pouco diferente. Agora controlamos o tamanho exato e o tempo de vida desses locais de memória. Se não libertarmos a memória, ocorrerão vazamentos de memória, o que pode causar o travamento do programa, já que em algum momento o sistema não poderá alocar mais memória.</p>
               </div>
   
             </section>
@@ -148,7 +148,7 @@ v = (float *) malloc(num_componentes * sizeof(float));
                     </pre>
 
                     <h2>realloc</h2> 
-                    <p>A função modifica o tamanho da memória previamente alocada apontada por *ptr para aquele especificado por num. O valor de num pode ser maior ou menor que o original. Um ponteiro para o bloco é devolvido porque realloc() pode precisar mover o bloco para aumentar o seu tamanho. Se isso ocorrer, o conteúdo do bloco antigo é copiado no novo bloco, e nenhuma informação é perdida. Se ptr for nulo, aloca size bytes e devolve um ponteiro; se size é zero, a memória apontada por ptr é liberada. Se não houver memória suficiente para a alocação, um ponteiro nulo é devolvido e o bloco original é deixado inalterado</p> 
+                    <p>A função modifica o tamanho da memória previamente alocada apontada por *ptr para aquele especificado por num. O valor de num pode ser maior ou menor que o original. Um ponteiro para o bloco é devolvido porque realloc() pode precisar mover o bloco para aumentar o seu tamanho. Se isso ocorrer, o conteúdo do bloco antigo é copiado no novo bloco, e nenhuma informação é perdida. Se ptr for nulo, aloca size bytes e devolve um ponteiro; se size é zero, a memória apontada por ptr é libertada. Se não houver memória suficiente para a alocação, um ponteiro nulo é devolvido e o bloco original é deixado inalterado</p> 
                     <p style="font-family:'consolas'">Sintaxe : realloc (void *ptr, unsigned int num);</p>
                     <pre>
  int*ptr;
@@ -157,7 +157,7 @@ v = (float *) malloc(num_componentes * sizeof(float));
 
                     <h1 class="titulos">DESALOCAR MEMÓRIA</h1>
                    <h2>free</h2> 
-                   <p>A função free libera o espaço de memória alocado.</p> 
+                   <p>A função free liberta o espaço de memória alocado.</p> 
                    <p style="font-family:'consolas'">Sintaxe : free(void *ptr);</p>
                    <pre>
 free(v); //liberando o espaço de memória alocado
