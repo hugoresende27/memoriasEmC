@@ -34,8 +34,21 @@ p{
    
 }
 
+.biblio{
+    display: flex;
+    
+}
 .biblio li{
     list-style: none;
+    font-family: 'Ubuntu', sans-serif;
+    margin-right: 20px;
+}
+.biblio li a {
+    text-decoration: none;
+   
+}
+.biblio li a:hover {
+    color: black;
 }
 
 .titulos{
