@@ -172,6 +172,8 @@ free(v); //liberando o espaço de memória alocado
             
           <div class="tm-section-wrap bg-white">
             <section id="arr" class="row tm-section">
+              <div>
+              <h3>Exemplo 1</h3>
               <pre>
 int main()								
 {
@@ -194,6 +196,29 @@ int main()
   return 0;	
 }
               </pre>
+            </div>
+            <div>
+              <h3>Exemplo 2</h3>
+              <pre>
+int main()								
+{
+
+  //int *p =(int*) malloc(sizeof(int)); //alocar memória
+  int *p =(int*) calloc(3,sizeof(int)); //alocar memória
+  //*p = 5;
+  //printf ("o valor é %d", *p);
+  p[1]=3;
+  p[2]=90;
+
+  printf ("o valor é %d e %d teste %d", p[1],p[2],p[0]); //p[0] vai ter um valor de memória
+  free(p);    //desalocar/libertar memória
+  
+  
+  system("pause");				
+	return 0;	
+}
+              </pre>
+            </div>  
             </section>
           </div>
             
@@ -206,6 +231,7 @@ int main()
                   <li><a href="http://linguagemc.com.br/alocacao-dinamica-de-memoria-em-c/">Fonte 4</a></li>
                   <li><a href="https://pt.gadget-info.com/difference-between-malloc">Fonte 5</a></li>
                   <li><a href="http://www.univasf.edu.br/~marcelo.linder/arquivos_ed1/aulas/aula9.pdf">Fonte 6</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=yFboyOwk2oM&ab_channel=CodeVault">Fonte 7</a></li>
                 </ul>
               </section>
           </div>
